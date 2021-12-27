@@ -6,6 +6,7 @@ import 'screens/Login.dart';
 import 'screens/Signup.dart';
 import 'screens/UserList.dart';
 import 'screens/Welcome.dart';
+import 'screens/api_test.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/UserList',
+      initialRoute: '/TestApi',
       routes: {
         '/Welcome': (context) => WelcomePage(),
         '/Button': (context) => ButtonComponent(),
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/Signup': (context) => Signup(),
         '/AddUser': (context) => AddUser(),
         '/UserList': (context) => UserList(),
+        '/TestApi': (context) => TestApi(),
       },
     );
   }
