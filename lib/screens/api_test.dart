@@ -10,7 +10,7 @@ class TestApi extends StatefulWidget {
 class _TestApiState extends State<TestApi> {
   List allNewsData = [];
   Future getAllNews() async {
-    final response = await http.get(Uri.parse("https://newsapi.org/v2/everything?q=tesla&from=${getCurrentDate()}&sortBy=publishedAt&apiKey=4159422918ad47e1bca6d72a504c5da6"));
+    final response = await http.get(Uri.parse("https://newsapi.org/v2/everything?q=tesla&from=&sortBy=publishedAt&apiKey=4159422918ad47e1bca6d72a504c5da6"));
     Map _allNews = {};
     if (response.statusCode == 200) {
       setState(() {
