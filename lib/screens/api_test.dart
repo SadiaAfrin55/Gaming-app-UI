@@ -35,7 +35,7 @@ class _TestApiState extends State<TestApi> {
             return Card(
               elevation: 3,
               child: ListTile(
-                title: Text(allNewsData[index]['englishName']),
+                title: Text(allNewsData[index]['title']),
               ),
             );
           }),
