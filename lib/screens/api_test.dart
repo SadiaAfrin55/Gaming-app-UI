@@ -15,6 +15,7 @@ class _TestApiState extends State<TestApi> {
     if (response.statusCode == 200) {
       setState(() {
         _allNews = jsonDecode(response.body);
+        print(_allNews);
         allNewsData = _allNews[""];
       });
     }
