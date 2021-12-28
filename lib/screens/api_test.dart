@@ -24,9 +24,9 @@ class Album {
   final String title;
 
   Album({
-    required this.userId,
-    required this.id,
-    required this.title,
+    @required this.userId,
+    @required this.id,
+    @required this.title,
   });
 
   factory Album.fromJson(Map<String, dynamic> json) {
@@ -41,14 +41,14 @@ class Album {
 void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({key}) : super(key: key);
 
   @override
   _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-  late Future<Album> futureAlbum;
+  Future<Album> futureAlbum;
 
   @override
   void initState() {
@@ -72,7 +72,7 @@ class _MyAppState extends State<MyApp> {
             future: futureAlbum,
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return Text(snapshot.data!.title);
+                return Text("");
               } else if (snapshot.hasError) {
                 return Text('${snapshot.error}');
               }
