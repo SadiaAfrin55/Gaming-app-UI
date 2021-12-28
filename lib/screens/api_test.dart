@@ -10,12 +10,12 @@ class TestApi extends StatefulWidget {
 class _TestApiState extends State<TestApi> {
   List allNewsData = [];
   Future getAllNews() async {
-    final response = await http.get(Uri.parse("https://newsapi.org/v2/everything?q=tesla&from=&sortBy=publishedAt&apiKey=4159422918ad47e1bca6d72a504c5da6"));
+    final response = await http.get(Uri.parse("http://api.alquran.cloud/v1/surah"));
     Map _allNews = {};
     if (response.statusCode == 200) {
       setState(() {
         _allNews = jsonDecode(response.body);
-        allNewsData = _allNews["articles"];
+        allNewsData = _allNews["data"];
       });
     }
   }
@@ -35,7 +35,7 @@ class _TestApiState extends State<TestApi> {
             return Card(
               elevation: 3,
               child: ListTile(
-                title: Text(allNewsData[index]['title']),
+                title: Text(allNewsData[index]['englishName']),
               ),
             );
           }),
