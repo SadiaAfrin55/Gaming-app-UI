@@ -11,7 +11,7 @@ class _TestApiState extends State<TestApi> {
   List postData = [];
   Future getPost() async {
     final response = await http.get(Uri.parse("http://api.alquran.cloud/v1/surah"));
-    Map post = {};
+    List post = [];
     if (response.statusCode == 200) {
       setState(() {
         post = jsonDecode(response.body);
