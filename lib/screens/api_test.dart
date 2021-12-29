@@ -14,7 +14,7 @@ class _TestApiState extends State<TestApi> {
     if (response.statusCode == 200) {
       setState(() {
         var decode = jsonDecode(response.body);
-        postData = decode;
+        postData = decode[""];
         print(postData);
       });
     }
@@ -34,11 +34,11 @@ class _TestApiState extends State<TestApi> {
       ),
       body: Center(
         child: ListView.builder(
-          itemCount: 9,
+          itemCount: postData.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(""),
-              subtitle: Text(""),
+              title: Text(postData[index]["title"]),
+              subtitle: Text(postData[index]["body"]),
             );
           },
         ),
