@@ -8,13 +8,14 @@ class TestApi extends StatefulWidget {
 }
 
 class _TestApiState extends State<TestApi> {
-  var postData;
+  List postData = [];
   Future getPost() async {
     final response = await http.get(Uri.parse("http://api.alquran.cloud/v1/surah"));
+    Map post = {};
     if (response.statusCode == 200) {
       setState(() {
-        var decode = jsonDecode(response.body);
-        postData = decode["data"];
+        post = jsonDecode(response.body);
+        postData = post["data"];
         print(postData);
       });
     }
@@ -32,17 +33,17 @@ class _TestApiState extends State<TestApi> {
       appBar: AppBar(
         title: Text('Test Api'),
       ),
-      body: Center(
-        child: ListView.builder(
-          itemCount: postData.length,
-          itemBuilder: (BuildContext context, int index) {
-            return ListTile(
-              title: Text(postData[index]["englishName"]),
-              subtitle: Text(postData[index]["numberOfAyahs"]),
-            );
-          },
-        ),
-      ),
+      // body: Center(
+      //   child: ListView.builder(
+      //     itemCount: postData.length,
+      //     itemBuilder: (BuildContext context, int index) {
+      //       return ListTile(
+      //         title: Text(postData[index]["englishName"]),
+      //         subtitle: Text(postData[index]["numberOfAyahs"]),
+      //       );
+      //     },
+      //   ),
+      // ),
     );
   }
 }
