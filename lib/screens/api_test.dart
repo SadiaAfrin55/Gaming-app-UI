@@ -8,7 +8,7 @@ class TestApi extends StatefulWidget {
 }
 
 class _TestApiState extends State<TestApi> {
-  var postData;
+  List postData = [];
   Future getPost() async {
     final response = await http.get(Uri.parse("http://api.alquran.cloud/v1/surah"));
     if (response.statusCode == 200) {
