@@ -1,10 +1,31 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class TestApi extends StatefulWidget {
   _TestApiState createState() => _TestApiState();
 }
 
 class _TestApiState extends State<TestApi> {
+  var postData;
+  Future getPost() async {
+    final response = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts"));
+    if (response.statusCode == 200) {
+      setState(() {
+        var decode = jsonDecode(response.body);
+        postData = decode;
+        print(postData);
+      });
+    }
+  }
+
+  @override
+  void initState() {
+    getPost();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,8 +33,14 @@ class _TestApiState extends State<TestApi> {
         title: Text('Test Api'),
       ),
       body: Center(
-        child: Text(
-          'Text',
+        child: ListView.builder(
+          itemCount: 9,
+          itemBuilder: (BuildContext context, int index) {
+            return ListTile(
+              title: Text(""),
+              subtitle: Text(""),
+            );
+          },
         ),
       ),
     );
