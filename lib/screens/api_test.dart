@@ -37,8 +37,8 @@ class _TestApiState extends State<TestApi> {
           itemCount: postData.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              title: Text(postData[index]["title"]),
-              subtitle: Text(postData[index]["body"]),
+              title: Text(postData[index]["englishName"]),
+              subtitle: Text(postData[index]["numberOfAyahs"]),
             );
           },
         ),
