@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/Welcome',
+      initialRoute: '/TestApi',
       routes: {
         '/Welcome': (context) => WelcomePage(),
         '/Button': (context) => ButtonComponent(),
@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/Signup': (context) => Signup(),
         '/AddUser': (context) => AddUser(),
         '/UserList': (context) => UserList(),
+        '/TestApi': (context) => TestApi(),
       },
     );
   }
