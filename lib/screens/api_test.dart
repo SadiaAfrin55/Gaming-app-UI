@@ -14,7 +14,7 @@ class _TestApiState extends State<TestApi> {
     if (response.statusCode == 200) {
       setState(() {
         var decode = jsonDecode(response.body);
-        postData = decode["userId"];
+        postData = decode["posts"];
         print(postData);
       });
     }
