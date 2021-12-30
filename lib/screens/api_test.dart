@@ -35,7 +35,7 @@ class _TestApiState extends State<TestApi> {
       body: Center(
         child: ListView.builder(
           itemCount: postData.length = null ? 0 : postData.length,
-          itemBuilder: (context, index) {
+          itemBuilder: (BuildContext context, int index) {
             return ListTile(
               title: Text(postData[index]["englishName"]),
               subtitle: Text(postData[index]["numberOfAyahs"]),
