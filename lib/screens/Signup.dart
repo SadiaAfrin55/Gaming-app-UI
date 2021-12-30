@@ -48,7 +48,7 @@ class _SignupState extends State<Signup> {
                 child: Column(
                   children: [
                     Text(
-                      "Login",
+                      "Sign up",
                       style: TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.w500,
