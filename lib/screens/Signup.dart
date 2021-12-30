@@ -183,7 +183,7 @@ class _SignupState extends State<Signup> {
                         ),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/Login');
+                        Navigator.pushNamed(context, '/Signup');
                       },
                     ),
                   ],
