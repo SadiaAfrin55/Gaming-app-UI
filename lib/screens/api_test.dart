@@ -10,10 +10,10 @@ class TestApi extends StatefulWidget {
 class _TestApiState extends State<TestApi> {
   List postData = [];
   Future getPost() async {
-    final response = await http.get(Uri.parse("http://api.alquran.cloud/v1/surah"));
+    final response = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/comments"));
     if (response.statusCode == 200) {
       setState(() {
-        postData = jsonDecode(response.body.toString());
+        postData = json.decode(response.body.toString());
 
         print(postData);
       });
