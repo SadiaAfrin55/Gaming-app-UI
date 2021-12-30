@@ -158,7 +158,7 @@ class _SignupState extends State<Signup> {
                       textcolor: Colors.white,
                       title: "Sign up",
                       onPressed: () {
-                        Navigator.pushNamed(context, '/Login');
+                        Navigator.pushNamed(context, '/AddUser');
                       },
                     ),
                   ],

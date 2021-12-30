@@ -73,7 +73,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       textcolor: Colors.black,
                       title: "Sign up",
                       onPressed: () {
-                        Navigator.pushNamed(context, '/Login');
+                        Navigator.pushNamed(context, '/Signup');
                       },
                     ),
                   ],
