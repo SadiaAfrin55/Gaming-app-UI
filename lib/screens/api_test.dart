@@ -8,7 +8,7 @@ class TestApi extends StatefulWidget {
 }
 
 class _TestApiState extends State<TestApi> {
-  List postData = [];
+  List postData;
   Future getPost() async {
     final response = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/comments"));
     if (response.statusCode == 200) {
@@ -34,7 +34,7 @@ class _TestApiState extends State<TestApi> {
       ),
       body: Center(
         child: ListView.builder(
-          itemCount: postData.length = null ? 0 : postData.length,
+          itemCount: postData.length == null ? 0 : postData.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
               title: Text(postData[index]["englishName"]),
