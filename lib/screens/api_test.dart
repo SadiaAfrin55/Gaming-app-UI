@@ -22,7 +22,7 @@ class _TestApiState extends State<TestApi> {
 
   @override
   void initState() {
-    this.getPost();
+    getPost();
     super.initState();
   }
 
