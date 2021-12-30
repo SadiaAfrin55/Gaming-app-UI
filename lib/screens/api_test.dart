@@ -11,7 +11,8 @@ class TestApi extends StatefulWidget {
 class _TestApiState extends State<TestApi> {
   List postData;
   Future getPost() async {
-    var response = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/comments"));
+    String ServiceUrl = "https://jsonplaceholder.typicode.com/comments";
+    var response = await http.get(Uri.parse(ServiceUrl));
     if (response.statusCode == 200) {
       setState(() {
         postData = json.decode(response.body.toString());
