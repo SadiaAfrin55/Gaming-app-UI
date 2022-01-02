@@ -20,11 +20,60 @@ class _Newspaper_homeState extends State<Newspaper_home> {
             Container(
               child: Column(
                 children: [
-                  CircleAvatar(
-                    radius: 40,
-                    backgroundImage: AssetImage("assets/person.png"),
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 40,
+                        backgroundImage: AssetImage("assets/person.png"),
+                      ),
+                      Text("person"),
+                    ],
                   ),
-                  Text("person")
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 40,
+                        backgroundImage: AssetImage("assets/person.png"),
+                      ),
+                      Text("person"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 40,
+                        backgroundImage: AssetImage("assets/person.png"),
+                      ),
+                      Text("person"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 40,
+                        backgroundImage: AssetImage("assets/person.png"),
+                      ),
+                      Text("person"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 40,
+                        backgroundImage: AssetImage("assets/person.png"),
+                      ),
+                      Text("person"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 40,
+                        backgroundImage: AssetImage("assets/person.png"),
+                      ),
+                      Text("person"),
+                    ],
+                  ),
                 ],
               ),
             ),
