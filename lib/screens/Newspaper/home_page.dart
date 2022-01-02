@@ -16,6 +16,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
               color: Colors.pink,
               height: 90,
             ),
+            SizedBox(height: 40),
             Container(
               child: Column(
                 children: [
