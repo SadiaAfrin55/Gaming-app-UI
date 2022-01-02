@@ -16,19 +16,16 @@ class _Newspaper_homeState extends State<Newspaper_home> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              SizedBox(
-                height: 200,
-                child: Flexible(
-                  child: ListView.builder(
-                    itemCount: 15,
-                    physics: NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemBuilder: (context, index) => Container(
-                      child: Row(
-                        children: [
-                          Image.asset("assets/person.png"),
-                        ],
-                      ),
+              Flexible(
+                child: ListView.builder(
+                  itemCount: 15,
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) => Container(
+                    child: Row(
+                      children: [
+                        Image.asset("assets/person.png"),
+                      ],
                     ),
                   ),
                 ),
