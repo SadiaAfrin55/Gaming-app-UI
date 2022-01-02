@@ -26,6 +26,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                     child: Row(
                       children: [
                         Image.asset("assets/person.png"),
+                        SizedBox(widtg: 30),
                         Column(
                           children: [
                             Text(
