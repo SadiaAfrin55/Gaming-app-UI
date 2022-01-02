@@ -17,64 +17,67 @@ class _Newspaper_homeState extends State<Newspaper_home> {
               height: 90,
             ),
             SizedBox(height: 40),
-            Container(
-              child: Row(
-                children: [
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundImage: AssetImage("assets/person.png"),
-                      ),
-                      Text("person"),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundImage: AssetImage("assets/person.png"),
-                      ),
-                      Text("person"),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundImage: AssetImage("assets/person.png"),
-                      ),
-                      Text("person"),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundImage: AssetImage("assets/person.png"),
-                      ),
-                      Text("person"),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundImage: AssetImage("assets/person.png"),
-                      ),
-                      Text("person"),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundImage: AssetImage("assets/person.png"),
-                      ),
-                      Text("person"),
-                    ],
-                  ),
-                ],
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Container(
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 40,
+                          backgroundImage: AssetImage("assets/person.png"),
+                        ),
+                        Text("person"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 40,
+                          backgroundImage: AssetImage("assets/person.png"),
+                        ),
+                        Text("person"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 40,
+                          backgroundImage: AssetImage("assets/person.png"),
+                        ),
+                        Text("person"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 40,
+                          backgroundImage: AssetImage("assets/person.png"),
+                        ),
+                        Text("person"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 40,
+                          backgroundImage: AssetImage("assets/person.png"),
+                        ),
+                        Text("person"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 40,
+                          backgroundImage: AssetImage("assets/person.png"),
+                        ),
+                        Text("person"),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
