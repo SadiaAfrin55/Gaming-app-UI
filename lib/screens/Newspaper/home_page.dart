@@ -8,17 +8,8 @@ class _Newspaper_homeState extends State<Newspaper_home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body:Container(
         child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                width: double.infinity,
-                color: Colors.pink,
-                height: 90,
-              ),
-              SizedBox(height: 40),
-             SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -40,10 +31,24 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                     color: Colors.green[700],
                   ),
                 ),
+              ),
+              Flexible(
+                child: ListView.builder(
+                  itemCount: 15,
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) => ListTile(
+                    title: Text("List $index"),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
       ),
+    );
+  }
+}
     );
   }
 }
