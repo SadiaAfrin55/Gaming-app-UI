@@ -8,6 +8,9 @@ class _Newspaper_homeState extends State<Newspaper_home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("newspaper"),
+      ),
       body: Container(
         child: SingleChildScrollView(
           child: Column(
