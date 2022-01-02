@@ -16,7 +16,14 @@ class _Newspaper_homeState extends State<Newspaper_home> {
               color: Colors.pink,
               height: 90,
             ),
-            Row(),
+            Container(
+              child: Column(
+                children: [
+                  Image.asset("assets/person.png"),
+                  Text("person")
+                ],
+              ),
+            ),
           ],
         ),
       ),
