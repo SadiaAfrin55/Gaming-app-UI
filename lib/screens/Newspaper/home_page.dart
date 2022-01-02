@@ -14,7 +14,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
             Container(
               width: double.infinity,
               color: Colors.pink,
-              height: 200,
+              height: 130,
             ),
             Row(),
           ],
