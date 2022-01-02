@@ -19,7 +19,10 @@ class _Newspaper_homeState extends State<Newspaper_home> {
             Container(
               child: Column(
                 children: [
-                  Image.asset("assets/person.png"),
+                  CircleAvatar(
+                    radius: 40,
+                    backgroundImage: AssetImage("assets/person.png"),
+                  ),
                   Text("person")
                 ],
               ),
