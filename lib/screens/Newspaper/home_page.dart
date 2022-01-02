@@ -13,25 +13,6 @@ class _Newspaper_homeState extends State<Newspaper_home> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              SizedBox(
-                height: 150,
-                child: ListView.builder(
-                  itemCount: 10,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => Container(
-                    height: 150,
-                    width: 150,
-                    margin: EdgeInsets.all(10),
-                    child: Center(
-                      child: Text(
-                        "Card $index",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                    color: Colors.green[700],
-                  ),
-                ),
-              ),
               Flexible(
                 child: ListView.builder(
                   itemCount: 15,
