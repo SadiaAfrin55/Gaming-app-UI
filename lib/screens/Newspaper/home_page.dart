@@ -50,6 +50,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                         Expanded(
                           flex: 10,
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(postData[index]["name"]),
                               Text(postData[index]["email"]),
