@@ -18,7 +18,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
             ),
             SizedBox(height: 40),
             Container(
-              child: Column(
+              child: Row(
                 children: [
                   Column(
                     children: [
