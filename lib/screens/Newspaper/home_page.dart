@@ -31,6 +31,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                         Text("person"),
                       ],
                     ),
+                    SizedBox(width: 10),
                     Column(
                       children: [
                         CircleAvatar(
@@ -40,6 +41,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                         Text("person"),
                       ],
                     ),
+                    SizedBox(width: 10),
                     Column(
                       children: [
                         CircleAvatar(
@@ -49,6 +51,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                         Text("person"),
                       ],
                     ),
+                    SizedBox(width: 10),
                     Column(
                       children: [
                         CircleAvatar(
@@ -58,6 +61,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                         Text("person"),
                       ],
                     ),
+                    SizedBox(width: 10),
                     Column(
                       children: [
                         CircleAvatar(
@@ -67,6 +71,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                         Text("person"),
                       ],
                     ),
+                    SizedBox(width: 10),
                     Column(
                       children: [
                         CircleAvatar(
