@@ -11,14 +11,10 @@ class _Newspaper_homeState extends State<Newspaper_home> {
       body: Container(
         child: Column(
           children: [
-            Row(
-              children: [
-                Container(
-                  width: double.infinity,
-                  color: Colors.pink,
-                  height: 200,
-                )
-              ],
+            Container(
+              width: double.infinity,
+              color: Colors.pink,
+              height: 200,
             ),
             Row(),
           ],
