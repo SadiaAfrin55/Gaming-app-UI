@@ -19,7 +19,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
             SizedBox(height: 40),
             Container(
               child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
+                //scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
                     Column(
