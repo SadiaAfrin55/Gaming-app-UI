@@ -21,8 +21,12 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                   itemCount: 15,
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  itemBuilder: (context, index) => ListTile(
-                    title: Text("List $index"),
+                  itemBuilder: (context, index) => Container(
+                    child: Row(
+                      children: [
+                        Image.asset("assets/person.png"),
+                      ],
+                    ),
                   ),
                 ),
               ),
