@@ -8,12 +8,20 @@ class _Newspaper_homeState extends State<Newspaper_home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('news home'),
-      ),
-      body: Center(
-        child: Text(
-          'Text',
+      body: Container(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: double.infinity,
+                  color: Colors.pink,
+                  height: 200,
+                )
+              ],
+            ),
+            Row(),
+          ],
         ),
       ),
     );
