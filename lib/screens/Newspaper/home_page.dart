@@ -11,7 +11,7 @@ class Newspaper_home extends StatefulWidget {
 class _Newspaper_homeState extends State<Newspaper_home> {
   List postData;
   Future getPost() async {
-    String ServiceUrl = "https://jsonplaceholder.typicode.com/comments";
+    String ServiceUrl = "https://newsapi.org/v2/everything?q=tesla&from=&sortBy=publishedAt&apiKey=4159422918ad47e1bca6d72a504c5da6";
     var response = await http.get(Uri.parse(ServiceUrl));
     if (response.statusCode == 200) {
       setState(() {
@@ -52,8 +52,8 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(postData[index]["name"]),
-                              Text(postData[index]["email"]),
+                              Text(postData[index]["author"]),
+                              Text(postData[index]["title"]),
                             ],
                           ),
                         ),
