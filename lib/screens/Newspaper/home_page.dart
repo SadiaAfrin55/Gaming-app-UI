@@ -29,7 +29,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                         itemBuilder: (context, index) => Container(
                           width: 100,
                           height: 100,
-                          margin: EdgeInsets.all(7),
+                          margin: EdgeInsets.all(4),
                           child: Center(
                             child: Column(
                               children: [
