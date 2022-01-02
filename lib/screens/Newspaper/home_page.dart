@@ -43,11 +43,10 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemBuilder: (context, index) => Container(
-                    margin: EdgeInsets.all(20),
                     child: Row(
                       children: [
                         Expanded(flex: 2, child: Image.asset("assets/person.png")),
-                        SizedBox(width: 30),
+                        SizedBox(width: 10),
                         Expanded(
                           flex: 10,
                           child: Column(
