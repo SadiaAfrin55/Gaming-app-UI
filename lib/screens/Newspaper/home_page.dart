@@ -8,7 +8,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Container(
+      body: Container(
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -46,9 +46,6 @@ class _Newspaper_homeState extends State<Newspaper_home> {
           ),
         ),
       ),
-    );
-  }
-}
     );
   }
 }
