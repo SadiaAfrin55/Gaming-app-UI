@@ -11,7 +11,7 @@ class Newspaper_home extends StatefulWidget {
 class _Newspaper_homeState extends State<Newspaper_home> {
   List postData;
   Future getPost() async {
-    String ServiceUrl = "https://jsonplaceholder.typicode.com/comments";
+    String ServiceUrl = "https://jsonplaceholder.typicode.com/photos";
     var response = await http.get(Uri.parse(ServiceUrl));
     if (response.statusCode == 200) {
       setState(() {
@@ -45,7 +45,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                   itemBuilder: (context, index) => Container(
                     child: Row(
                       children: [
-                        Expanded(flex: 2, child: Image.asset("assets/person.png")),
+                        Expanded(flex: 2, child: Image.asset(postData[index]["url"])),
                         SizedBox(width: 10),
                         Expanded(
                           flex: 10,
@@ -53,7 +53,6 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(postData[index]["name"]),
-                              Text(postData[index]["email"]),
                             ],
                           ),
                         ),
