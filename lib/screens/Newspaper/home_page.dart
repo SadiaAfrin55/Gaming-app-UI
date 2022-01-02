@@ -46,13 +46,16 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                     margin: EdgeInsets.all(20),
                     child: Row(
                       children: [
-                        Image.asset("assets/person.png"),
+                        Expanded(flex: 2, child: Image.asset("assets/person.png")),
                         SizedBox(width: 30),
-                        Column(
-                          children: [
-                            Text(postData[index]["name"]),
-                            Text(postData[index]["email"]),
-                          ],
+                        Expanded(
+                          flex: 10,
+                          child: Column(
+                            children: [
+                              Text(postData[index]["name"]),
+                              Text(postData[index]["email"]),
+                            ],
+                          ),
                         ),
                       ],
                     ),
