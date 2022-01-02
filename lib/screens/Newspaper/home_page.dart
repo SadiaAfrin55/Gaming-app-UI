@@ -1,10 +1,31 @@
+import 'dart:convert';
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class Newspaper_home extends StatefulWidget {
   _Newspaper_homeState createState() => _Newspaper_homeState();
 }
 
 class _Newspaper_homeState extends State<Newspaper_home> {
+  List postData;
+  Future getPost() async {
+    String ServiceUrl = "https://jsonplaceholder.typicode.com/comments";
+    var response = await http.get(Uri.parse(ServiceUrl));
+    if (response.statusCode == 200) {
+      setState(() {
+        postData = json.decode(response.body.toString());
+      });
+    }
+  }
+
+  @override
+  void initState() {
+    this.getPost();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +39,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
             children: [
               Flexible(
                 child: ListView.builder(
-                  itemCount: 15,
+                  itemCount: postData.length == null ? 0 : postData.length,
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemBuilder: (context, index) => Container(
@@ -29,12 +50,8 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                         SizedBox(width: 30),
                         Column(
                           children: [
-                            Text(
-                              "Title",
-                            ),
-                            Text(
-                              "Title",
-                            ),
+                            Text(postData[index]["name"]),
+                            Text(postData[index]["email"]),
                           ],
                         ),
                       ],
