@@ -52,7 +52,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(postData[index]["name"]),
+                              Text(postData[index]["title"]),
                             ],
                           ),
                         ),
