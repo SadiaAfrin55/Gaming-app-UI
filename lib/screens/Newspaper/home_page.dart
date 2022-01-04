@@ -15,7 +15,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
     var response = await http.get(Uri.parse(ServiceUrl));
     if (response.statusCode == 200) {
       setState(() {
-        postData = json.decode(response.body);
+        postData = json.decode(response.body.toString());
       });
     }
   }
