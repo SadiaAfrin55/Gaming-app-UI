@@ -39,10 +39,8 @@ class _Newspaper_homeState extends State<Newspaper_home> {
             children: [
               Flexible(
                 child: ListView.builder(
-                  itemCount: postData.length == null ? 0 : postData.length,
-                  physics: NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) => Container(
+                  itemCount: postData.length,
+                  itemBuilder: (BuildContext context, int index) => Container(
                     child: Row(
                       children: [
                         Expanded(flex: 2, child: Image.asset(postData[index]["url"])),
