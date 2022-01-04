@@ -43,7 +43,7 @@ class _Newspaper_homeState extends State<Newspaper_home> {
                   itemBuilder: (BuildContext context, int index) => Container(
                     child: Row(
                       children: [
-                        Expanded(flex: 2, child: Image.asset(postData[index]["url"])),
+                        //Expanded(flex: 2, child: Image.asset(postData[index]["url"])),
                         SizedBox(width: 10),
                         Expanded(
                           flex: 10,
