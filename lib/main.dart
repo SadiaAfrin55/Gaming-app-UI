@@ -8,6 +8,7 @@ import 'screens/Signup.dart';
 import 'screens/UserList.dart';
 import 'screens/Welcome.dart';
 import 'screens/api_test.dart';
+import 'screens/location_track.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         '/AddUser': (context) => AddUser(),
         '/UserList': (context) => UserList(),
         '/TestApi': (context) => TestApi(),
+        '/Location': (context) => LocationTracker(),
         '/newspaper_home': (context) => Newspaper_home(),
       },
     );
